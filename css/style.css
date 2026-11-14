@@ -1,0 +1,154 @@
+/* Box-sizing rule */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root variables for Light and Dark modes */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --bar-bg: #f4f4f4;
+    --card-bg: #f9f9f9;
+    --card-border: #ddd;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --btn-bg: #333;
+    --btn-text: #fff;
+}
+
+body.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --bar-bg: #2a2a2a;
+    --card-bg: #2d2d2d;
+    --card-border: #444;
+    --input-bg: #333;
+    --input-border: #555;
+    --btn-bg: #f0f0f0;
+    --btn-text: #1a1a1a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Bar / Header Layout (Flexbox) */
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bar-bg);
+}
+
+.bar h1 {
+    font-size: 1.5rem;
+}
+
+.bar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Main Layout */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--card-border);
+}
+
+/* Cards Row (Flexbox with gap) */
+.cards-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.form-section {
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.form-section h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#theme-toggle {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--bar-bg);
+    margin-top: 2rem;
+}
